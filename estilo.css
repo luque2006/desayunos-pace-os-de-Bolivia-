@@ -1,0 +1,225 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #2e1f27;
+  color: #cbc7b9;
+  line-height: 1.6;
+}
+
+/* -------------------- HEADER -------------------- */
+.header {
+  background-color: #3b2a36;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #eab308;
+}
+
+.logo span {
+  color: #f59e0b;
+}
+
+.nav {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav a {
+  color: #fef3c7;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.nav a:hover {
+  color: #eab308;
+}
+
+/* Menú hamburguesa responsive */
+.menu-toggle {
+  display: none;
+}
+
+.menu-icon {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #eab308;
+}
+
+@media (max-width: 768px) {
+  .nav {
+    display: none;
+    flex-direction: column;
+    background-color: #3b2a36;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    width: 200px;
+    padding: 1rem;
+    border-radius: 8px;
+  }
+
+  .menu-toggle:checked + .menu-icon + .nav {
+    display: flex;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+}
+
+/* -------------------- HERO -------------------- */
+.hero {
+  background: url('IMG/TODO.jpeg') center/cover no-repeat;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 2.8rem;
+  color: #ebe23d;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
+}
+
+/* -------------------- CONTAINER -------------------- */
+.container {
+  max-width: 1100px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+/* -------------------- CARDS -------------------- */
+.card {
+  background-color: #422f3b;
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.02);
+}
+
+.card h2 {
+  color: #eab308;
+  margin-bottom: 1rem;
+}
+
+/* -------------------- GALERÍA -------------------- */
+.galeria {
+  margin-top: 2rem;
+}
+
+.galeria h2 {
+  color: #f59e0b;
+  margin-bottom: 1rem;
+}
+
+.galeria-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.galeria-container figure {
+  overflow: hidden;
+  border-radius: 12px;
+  background-color: #3b2a36;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease;
+}
+
+.galeria-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.galeria-container figure:hover {
+  transform: scale(1.03);
+}
+
+.galeria-container figure:hover img {
+  transform: scale(1.1);
+}
+
+figcaption {
+  padding: 0.5rem;
+  text-align: center;
+  background-color: #eab308;
+  color: #2e1f27;
+  font-weight: bold;
+  font-size: 0.95rem;
+}
+
+/* -------------------- OPINIONES -------------------- */
+.opiniones {
+  background-color: #3b2a36;
+  padding: 2rem 1rem;
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.opiniones h2 {
+  color: #f59e0b;
+  margin-bottom: 1.5rem;
+}
+
+.opiniones-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 800px;
+  margin: auto;
+}
+
+.opinion {
+  background-color: #5c3e4c;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+}
+
+/* -------------------- FOOTER -------------------- */
+.footer {
+  background-color: #1c1217;
+  color: #aaa;
+  padding: 1.5rem;
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.footer-links a {
+  color: #f59e0b;
+  text-decoration: none;
+  margin: 0 0.5rem;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #eab308;
+}
+
